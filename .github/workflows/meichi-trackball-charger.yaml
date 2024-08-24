@@ -22,8 +22,8 @@ jobs:
       with:
         config: .kibot.yaml
         dir: gerber
-        board: kicad/meishi-trackball-charger/meishi-trackball-charger.kicad_pcb
-        schema: kicad/meishi-trackball-charger/meishi-trackball-charger.kicad_sch
+        board: kicad/meishi-trackball-charger.kicad_pcb
+        schema: kicad/meishi-trackball-charger.kicad_sch
 
     - name: Zip Gerber files
       run: |
