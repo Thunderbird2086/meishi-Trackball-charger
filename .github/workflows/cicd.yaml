@@ -2,6 +2,7 @@ name: meishi Trackball Charger PCB
 
 on:
   pull_request:
+
   workflow_dispatch:
 
 jobs:
@@ -15,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Generate gerber for meishi trackball charger
-      uses: INTI-CMNB/KiBot@v1.7.0
+      uses: INTI-CMNB/KiBot@v2_k8
       with:
         config: .kibot.yaml
         dir: gerber

@@ -446,7 +446,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "skeletyl-charger.kicad_pro",
+    "filename": "meishi-trackball-charger.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -515,7 +515,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "unicorne-charger.net",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "unicorne-charger.step",
