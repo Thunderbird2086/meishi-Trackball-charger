@@ -20,6 +20,9 @@ fp-info-cache
 # Netlist files (exported from Eeschema)
 *.net
 
+# round tracks config
+*.round-tracks-config
+
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
@@ -27,3 +30,6 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# macOS
+.DS_Store
