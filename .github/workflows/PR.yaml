@@ -1,0 +1,39 @@
+name: PR
+
+on:
+  push:
+    paths:
+      - '*.kicad_sch'
+      - '*.kicad_pcb'
+      - '.github/workflows/*yaml'
+      - '.kibot.yaml'
+  repository_dispatch:
+    types: [run_qs]
+
+jobs:
+  Gerber:
+    runs-on: ubuntu-latest  # Don't change
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        # So we can run a diff between last 2 changes
+        fetch-depth: '0'
+
+    - name: Run KiBot
+      uses: INTI-CMNB/KiBot@v2_k8
+      with:
+        verbose: 3
+        config: .kibot.yaml
+        dir: gerber
+        board: kicad/meishi-trackball-charget.kicad_pcb
+        schema: kicad/meishi-trackball-charget.kicad_sch
+
+    - name: Retrieve results
+      uses: actions/upload-artifact@v4
+      with:
+        name: Automatic_outputs
+        path: Generated
